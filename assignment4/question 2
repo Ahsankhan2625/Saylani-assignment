@@ -1,0 +1,24 @@
+
+void printFibonacci(int n) {
+  int first = 0;
+  int second = 1;
+  
+  if (n >= 1) {
+    print(first);
+  }
+  if (n >= 2) {
+    print(second);
+  }
+  
+  for (int i = 2; i < n; i++) {
+    int next = first + second;
+    if (next <= n) {
+      print(next);
+    } else {
+      break;
+    }
+    first = second;
+    second = next;
+  }
+}
+
